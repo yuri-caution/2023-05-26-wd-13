@@ -45,8 +45,24 @@ a {
 
 .gnb {
     margin-top: 120px;
+    position: relative;
+    z-index: 100;
 }
-.gnb >li {}
+
+.gnb::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 180px;
+    background-color: #ddd;
+    width: 1200px;
+    height: 188px;
+}
+
+.gnb >li {
+    position: relative;
+
+}
 .gnb >li >a {
     display: block;
     padding: 12px;
@@ -61,18 +77,28 @@ a {
 
 
 .gnb ul {
-    display: none;
-    border: 1px solid #999;
+    position: absolute;
+    top: 0;
+    left: 180px;
+    z-index: 100;
+    display: flex;
+    /* display: none; */
 }
 .gnb ul li {}
 .gnb ul li a {
     display: block;
-    padding: 6px;
+    width: 180px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #ddd;
+    text-align: center;
 }
 
 .gnb ul li:hover a {
     background-color: lightgreen;
 }
+
+
 
 .member {
     margin-top: 30px;
