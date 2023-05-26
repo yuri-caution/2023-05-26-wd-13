@@ -133,15 +133,18 @@
     <div class="footer">
         <div class="f_logo"><img src="./image/f_logo.png" alt="조이컨트리클럽 하단 로고"></div>
         <div class="info">
+            <ul class="f_menu">
+                <li><a href="#">FOOTERMENU</a></li>
+                <li><a href="#">FOOTERMENU</a></li>
+                <li><a href="#">FOOTERMENU</a></li>
+                <li><a href="#">FOOTERMENU</a></li>
+                <li><a href="#">FOOTERMENU</a></li>
+                <li><a href="#">FOOTERMENU</a></li>
+            </ul>
             <div class="copyright">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi praesentium cumque alias dolorum, sint ea.</p>
                 <p>Copyright© 2023 GOLFCLUB All Rights Reserved. hosting by JOY</p>
             </div>
-            <ul class="sns">
-                <li><a href="#"><img src="./image/facebook.png" alt="facebook 로고"></a></li>
-                <li><a href="#"><img src="./image/insta.png" alt="instafram 로고"></a></li>
-                <li><a href="#"><img src="./image/youtube.png" alt="youtube 로고"></a></li>
-            </ul>
         </div>
     </div>
 
@@ -155,11 +158,11 @@
 
     <script>
         // 서브 메뉴
-        // $('.gnb').hover(function(){
-        //     $('.gnb ul').stop().fadeIn()
-        // }, function(){
-        //     $('.gnb ul').stop().fadeOut()
-        // })
+        $('.gnb').hover(function(){
+            $('.gnb ul').css('display', 'flex')
+        }, function(){
+            $('.gnb ul').css('display', 'none')
+        })
 
         // 상하 슬라이드
         setInterval(function(){

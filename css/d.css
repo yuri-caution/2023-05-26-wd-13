@@ -47,16 +47,18 @@ a {
     margin-top: 120px;
     position: relative;
     z-index: 100;
+    width: 100%;
 }
 
-.gnb::after {
+.gnb:hover::after {
     content: '';
     position: absolute;
     top: 0;
     left: 180px;
     background-color: #ddd;
-    width: 1200px;
-    height: 188px;
+    width: 10000%;
+    height: 100%;
+    opacity: 70%;
 }
 
 .gnb >li {
@@ -80,9 +82,10 @@ a {
     position: absolute;
     top: 0;
     left: 180px;
+    width: 100%;
     z-index: 100;
     display: flex;
-    /* display: none; */
+    display: none;
 }
 .gnb ul li {}
 .gnb ul li a {
@@ -90,7 +93,6 @@ a {
     width: 180px;
     height: 48px;
     line-height: 48px;
-    background-color: #ddd;
     text-align: center;
 }
 
@@ -363,10 +365,48 @@ a {
 .info {
     width: calc(100% - 200px);
     display: flex;
+    flex-direction: column;
+}
+
+.f_menu {
+    display: flex;
+    padding: 6px 0;
+}
+
+.f_menu li {
+    position: relative;
+}
+
+.f_menu li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #999;
+}
+
+.f_menu li:last-child:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0px;
+}
+
+.f_menu li a {
+    padding: 10px;
+    color: lightskyblue;
+}
+
+.f_menu li:hover a {
+    text-decoration: underline;
 }
 
 .copyright {
     flex: 4;
+    padding: 0 10px;
 }
 
 
