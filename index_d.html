@@ -21,7 +21,6 @@
                     <ul>
                         <li><a href="#">클럽소개</a></li>
                         <li><a href="#">시설안내 안내</a></li>
-                        <li></li>
                     </ul>
                 </li>
                 <li>
@@ -30,7 +29,6 @@
                         <li><a href="#">요금안내</a></li>
                         <li><a href="#">예약안내</a></li>
                         <li><a href="#">위약안내</a></li>
-                        <li></li>
                     </ul>
                 </li>
                 <li>
@@ -40,7 +38,6 @@
                         <li><a href="#">이벤트</a></li>
                         <li><a href="#">자료실</a></li>
                         <li><a href="#">포토갤러리</a></li>
-                        <li></li>
                     </ul>
                 </li>
                 <li>
@@ -48,7 +45,6 @@
                     <ul>
                         <li><a href="#">공지사항</a></li>
                         <li><a href="#">Q&A</a></li>
-                        <li></li>
                     </ul>
                 </li>
             </ul>
@@ -60,7 +56,13 @@
         <div class="main">
             <div class="slider">
                 <div class="slide">
-                    <a><img src="./image/s1.jpg" alt="스윙하는 남성의 뒷모습"></a>
+                    <a>
+                        <img src="./image/s1.jpg" alt="스윙하는 남성의 뒷모습">
+                        <div class="txt">
+                            <h2>Lorem ipsum dolor sit amet.</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </a>
                     <a><img src="./image/s2.jpg" alt="골프장 조감도"></a>
                     <a><img src="./image/s3.jpg" alt="필드 위에 골프공"></a>
                 </div>
@@ -85,10 +87,10 @@
                 </div>
                 <div class="txtBox">
                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
-                    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam itaque repudiandae similique, neque, quisquam iusto maxime, quidem quibusdam in quas aperiam aspernatur magnam doloremque</h4>
+                    <h4>repudiandae similique, neque, quisquam iusto maxime, quidem quibusdam in quas aperiam aspernatur magnam doloremque</h4>
                 </div>
                 <div class="arrow">
-                    <img src="./image/arr.png" alt="우측 진행 버튼">
+                    <a href="#"><img src="./image/arr.png" alt="우측 진행 버튼"></a>
                 </div>
             </div>
             <div class="contents">
@@ -100,19 +102,19 @@
                     <div class="tab_con">
                         <ul class="notice">
                             <li>
-                                <a href="#">dolor sit amet consectetur exercitationem inventore!</a>
+                                <a href="#">dolor sit amet consectetur exercitationem inventore! Lorem ipsum dolor sit amet consectetur.</a>
                                 <span>2023.12.20</span>
                             </li>
                             <li>
-                                <a href="#">Lorem ipsum dolor sit amet consectetur soluta culpa.</a>
+                                <a href="#">Lorem ipsum dolor sit amet consectetur soluta culpa. Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
                                 <span>2023.12.20</span>
                             </li>
                             <li>
-                                <a href="#">dolor sit amet consectetur uisquam beatae.</a>
+                                <a href="#">dolor sit amet consectetur uisquam beatae. Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
                                 <span>2023.12.20</span>
                             </li>
                             <li>
-                                <a href="#">sit amet consectetur Lorem ipsum dolor a natus?</a>
+                                <a href="#">sit amet consectetur Lorem ipsum dolor a natus? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat, autem!</a>
                                 <span>2023.12.20</span>
                             </li>
                         </ul>
@@ -144,12 +146,45 @@
     </div>
 
     <div class="modal">
-        <h2>자원봉사자 모집 안내</h2>
+        <h2>Lorem ipsum dolor sit</h2>
         <p>청춘의 기관과 꽃이 가는 봄바람을 사막이다. 따뜻한 않는 가는 품에 품고 지혜는 찾아 그들은 산야에 있으랴? 이상은 밝은 있는 듣는다. 끝까지 사라지지 피가 하는 얼마나 이것이다. 새 수 붙잡아
             끓는다. 천고에 품었기 그들은 부패를 눈에 목숨을 안고, 위하여 따뜻한 것이다. 과실이 위하여 있음으로써 보이는 목숨이 무엇을 찾아 봄바람이다. 이상의 만천하의 목숨을 무한한 봄바람이다.
             만천하의 청춘은 고동을 오직 수 몸이 것은 부패뿐이다. 바이며, 투명하되 그들의 구하지 이상이 과실이 산야에 피가 있으랴?</p>
         <div class="close">닫기</div>
     </div>
+
+    <script>
+        // 서브 메뉴
+        $('.gnb>li').hover(function(){
+            $(this).find('ul').stop().slideDown()
+        }, function(){
+            $(this).find('ul').stop().slideUp()
+        })
+
+        // 상하 슬라이드
+        setInterval(function(){
+            $('.slide').animate({top: -400}, function(){
+                $('.slide a:first').appendTo('.slide')
+                $('.slide').css('top', 0)
+            })
+        }, 2700)
+
+        // 탭 전환
+        $('.tab_tit h3').click(function(){
+            $('.tab_tit h3').removeClass('on')
+            $(this).addClass('on')
+            $('.tab_con ul').hide()
+            $('.tab_con ul').eq($(this).index()).show()
+        })
+
+        // 모달
+        $('.notice li a:first').click(function(){
+            $('.modal').show()
+        })
+        $('.close').click(function(){
+            $('.modal').hide()
+        })
+    </script>
 </body>
 
 </html>
