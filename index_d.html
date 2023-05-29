@@ -193,12 +193,14 @@
             },
         )
 
-        // 상하 슬라이드
+        // Fade 슬라이드
+        var idx = 0
+        $('.slide a').eq(idx).show()
         setInterval(function(){
-            $('.slide').animate({top: -400}, function(){
-                $('.slide a:first').appendTo('.slide')
-                $('.slide').css('top', 0)
-            })
+            var nextIdx = (idx + 1) % $('.slide a').length
+            $('.slide a').eq(idx).fadeOut()
+            $('.slide a').eq(nextIdx).fadeIn()
+            idx = nextIdx
         }, 2700)
 
         // 탭 전환
