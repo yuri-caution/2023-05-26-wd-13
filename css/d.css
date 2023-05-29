@@ -49,8 +49,8 @@ a {
     left: 10px;
     width: 180px;
     z-index: 100;
-    transition: all 0.3s;
     overflow: hidden;
+    transition: all 0.3s;
 }
 
 .gnb >li {
@@ -91,37 +91,6 @@ a {
 .gnb ul li:hover a {
     background-color: lightgreen;
 }
-
-.member {
-    margin-top: 250px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.member a {
-    flex: 1;
-    font-size: 13px;
-    position: relative;
-    text-align: center;
-}
-
-.member a:first-child:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 5%;
-    width: 1px;
-    height: 100%;
-    background-color: #ddd;
-}
-
-.member a:hover {
-    text-decoration: underline;
-    color: cadetblue;
-}
-
-
 
 
 /* main */
@@ -176,27 +145,16 @@ a {
 
 /* links */
 .links {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    width: 70px;
+    height: 150px;
+    width: 100%;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
     background-color: #fff;
-    padding: 10px;
+    padding: 10px 30px;
     border-bottom: 1px solid #666;
-}
-
-
-.links li {
-    border-bottom: 1px solid #666;
-}
-
-.links li:last-child {
-    border-bottom: none;
 }
 
 .links img {
@@ -206,8 +164,7 @@ a {
 }
 
 .links li p {
-    padding: 4px 0;
-    font-size: 10px;
+    padding-top: 10px;
 }
 
 .links li:hover p {
@@ -219,87 +176,47 @@ a {
 }
 
 
-/* banner */
-.banner {
-    height: 200px;
-    margin: 10px 30px;
-    padding-left: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    border: 1px solid #999;
-}
-
-.banner img {
-    display: block;
-
-}
-
-.banner .txtBox h3 {
-    margin-bottom: 10px;
-}
-
-.arrow {
-
-}
-
-.arrow img {
-    width: 50%;
-}
-
-
 /* contents */
-.tab {
+.contents {
     height: 250px;
     padding: 10px 30px;
-}
-
-.tab_tit {
     display: flex;
-    padding: 0 10px;
+    gap: 50px;
 }
 
-.tab_tit h3 {
-    cursor: pointer;
+.contents div {
+    flex: 1;
+    width: 400px;
+}
+
+.contents div h3 {
     display: block;
+    width: 30%;
     height: 50px;
     line-height: 50px;
-    background-color: #ccc;
-    padding: 0 20px;
     font-size: 14px;
     border: 1px solid #999;
-    margin-left: -1px;
     border-bottom: none;
+    text-align: center;
 }
 
-.tab_tit h3.on {
-    background-color: #fff;
+.contents ul {
+    border-top: 1px solid #999;
 }
 
-.tab_con ul {
-    height: 180px;
-}
-.notice {
-    border: 1px solid #999;
-    padding: 4px 40px;
-    background-color: #fff;
-    margin-top: -1px;
-    /* display: none; */
-}
-
-.notice li {
+.notice ul li {
     display: flex;
-    gap: 100px;
+    gap: 10px;
     align-items: center;
     border-bottom: 1px solid #999;
+    width: 100%;
 }
 
-.notice li:last-child {
+.notice ul li:last-child {
     border-bottom: none;
 }
 
-.notice li a {
+.notice ul li a {
     flex: 6;
     display: block;
     white-space: nowrap;
@@ -313,46 +230,44 @@ a {
 
 .notice li span {
     flex: 2;
-    width: 150px;
 }
 
-.gallery {
-    border: 1px solid #999;
-    padding: 2px 40px;
-    background-color: #fff;
-    margin-top: -1px;
-    display: none;
+.gallery ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
 }
 
-.gallery li {
-    float: left;
-    width: 33%;
-    height: 100%;
+.gallery ul li {
+    height: 150px;
     padding: 10px;
 }
 
-.gallery li img {
-    display: block;
+.gallery ul li a p {
+    text-align: center;
+    margin: 6px 0;
+}
+
+.gallery ul li a img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 
+
 /* footer */
 .footer {
+    height: 120px;
     display: flex;
     background-color: #eee;
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.f_logo {
-    width: 200px;
+    padding: 0 30px;
 }
 
 .info {
+    margin-left: 200px;
     width: calc(100% - 200px);
     display: flex;
     flex-direction: column;
@@ -388,10 +303,11 @@ a {
 .f_menu li a {
     padding: 10px;
     color: lightskyblue;
+    text-decoration: underline;
 }
 
 .f_menu li:hover a {
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .copyright {
@@ -399,15 +315,15 @@ a {
     padding: 0 10px;
 }
 
-
-.sns {
-    flex: 1;
-    display: flex;
+.site {}
+.site li {}
+.site li a {
+    display: block;
+    margin-right: 50px;
 }
 
-.sns img {
-    display: block;
-    width: 60%;
+.site li a:hover {
+    text-decoration: underline;
 }
 
 
