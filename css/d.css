@@ -35,6 +35,12 @@ a {
     border-right: 1px solid #999;
 }
 
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
 .gnb {
     margin-top: 120px;
     background-color: rgba(240,240,240,0.8);
@@ -43,6 +49,8 @@ a {
     left: 10px;
     width: 180px;
     z-index: 100;
+    transition: all 0.3s;
+    overflow: hidden;
 }
 
 .gnb >li {
@@ -69,7 +77,7 @@ a {
     top: 0;
     left: 180px;
     display: flex;
-    display: none;
+    /* display: none; */
 }
 .gnb ul li {}
 .gnb ul li a {

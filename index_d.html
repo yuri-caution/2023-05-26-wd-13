@@ -158,14 +158,21 @@
 
     <script>
         // 서브 메뉴
+        // $('.gnb').hover(
+        //     function() {
+        //         var val = $(window).width() - 10
+        //         $(this).stop().animate({width: val})
+        //         $('.gnb ul').css('display', 'flex')
+        //     }, function () {
+        //         $(this).stop().animate({width: 180})
+        //         $('.gnb ul').css('display', 'none')
+        //     },
+        // )
         $('.gnb').hover(
             function() {
-                var val = $(window).width() - 10
-                $(this).stop().animate({width: val}, 'fast')
-                $('.gnb ul').css('display', 'flex')
+                $(this).stop().css('width', 'calc(100% - 10px)')
             }, function () {
-                $(this).stop().animate({width: 180}, 'fast')
-                $('.gnb ul').css('display', 'none')
+                $(this).stop().css('width', '180px')
             },
         )
 
