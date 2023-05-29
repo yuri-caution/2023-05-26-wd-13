@@ -37,28 +37,25 @@ a {
 
 .gnb {
     margin-top: 120px;
+    background-color: rgba(240,240,240,0.8);
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 10px;
+    width: 180px;
     z-index: 100;
-    padding-left: 10px;
-}
-
-.gnb:hover {
-    background-color: rgba(240,240,240,0.8);
 }
 
 .gnb >li {
     position: relative;
-
 }
+
 .gnb >li >a {
     display: block;
     padding: 12px;
     border: 1px solid #666;
-    margin-top: -1px;
+    /* margin-top: -1px; */
     width: 180px;
+    background-color: #fff;
 }
 
 
@@ -71,10 +68,8 @@ a {
     position: absolute;
     top: 0;
     left: 180px;
-    width: 100%;
-    z-index: 100;
     display: flex;
-    /* display: none; */
+    display: none;
 }
 .gnb ul li {}
 .gnb ul li a {
@@ -90,7 +85,7 @@ a {
 }
 
 .member {
-    margin-top: 350px;
+    margin-top: 250px;
     width: 100%;
     display: flex;
     align-items: center;
