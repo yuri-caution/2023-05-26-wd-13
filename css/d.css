@@ -30,35 +30,23 @@ a {
 
 /* aside */
 .aside {
+    /* position: relative; */
     width: 200px;
-    padding: 0 10px;
-    position: relative;
     border-right: 1px solid #999;
-}
-
-.logo img {
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 100%;
 }
 
 .gnb {
     margin-top: 120px;
-    position: relative;
-    z-index: 100;
-    width: 100%;
-}
-
-.gnb:hover::after {
-    content: '';
     position: absolute;
     top: 0;
-    left: 180px;
-    background-color: #ddd;
-    width: 10000%;
-    height: 100%;
-    opacity: 70%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding-left: 10px;
+}
+
+.gnb:hover {
+    background-color: rgba(240,240,240,0.8);
 }
 
 .gnb >li {
@@ -70,6 +58,7 @@ a {
     padding: 12px;
     border: 1px solid #666;
     margin-top: -1px;
+    width: 180px;
 }
 
 
@@ -85,7 +74,7 @@ a {
     width: 100%;
     z-index: 100;
     display: flex;
-    display: none;
+    /* display: none; */
 }
 .gnb ul li {}
 .gnb ul li a {
@@ -100,10 +89,8 @@ a {
     background-color: lightgreen;
 }
 
-
-
 .member {
-    margin-top: 30px;
+    margin-top: 350px;
     width: 100%;
     display: flex;
     align-items: center;
